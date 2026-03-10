@@ -5,7 +5,7 @@ import ComingSoon from '../ComingSoon.vue'
 
 describe('ComingSoon', () => {
   it('renders properly', () => {
-    const wrapper = mount(ComingSoon, { props: { msg: 'Hello Vitest' } })
-    expect(wrapper.text()).toContain('Hello Vitest')
+    const wrapper = mount(ComingSoon, { props: { msg: 'Hello' } })
+    expect(wrapper.text()).toContain('Hello')
   })
 })
