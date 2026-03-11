@@ -18,7 +18,7 @@ a,
 a,
 .blue {
   text-decoration: none;
-  color: rgb(45, 178, 255);
+  color: var(--blue-font-1);
   transition: 0.4s;
   padding: 3px;
 }

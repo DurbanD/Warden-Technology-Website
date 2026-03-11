@@ -9,41 +9,52 @@
       rel="noopener noreferrer"
       class="social-icon"
     >
-      <!-- Using simple text icons for now; swap with SVG/font-awesome later -->
-      {{ link.icon }}
+        <img :alt="link.icon" class="social-icon" :src="link.iconPath" :width=iconWidth :height=iconHeight />
     </a>
   </div>
 </template>
 
 <script setup>
+import facebookSvg from '../icons/facebook.svg'
+import instagramSvg from '../icons/instagram.svg'
+import xSvg from '../icons/twitter-x.svg'
+import tiktokSvg from '../icons/tiktok.svg'
+import linkedinSvg from '../icons/linkedin.svg'
+
+const iconWidth = '20'
+const iconHeight = '20'
 // All your social links in one central place — easy to edit/add/remove
 const socialLinks = [
   {
     platform: 'Facebook',
     url: 'https://facebook.com/', // ← replace with real URL
-    icon: 'FB'
+    icon: 'FB',
+    iconPath: facebookSvg
   },
   {
     platform: 'Instagram',
     url: 'https://instagram.com/',
-    icon: 'IG'
+    icon: 'IG',
+    iconPath: instagramSvg
   },
   {
     platform: 'X', // formerly Twitter
     url: 'https://x.com/', // or your business handle
-    icon: 'X'
+    icon: 'X',
+    iconPath: xSvg
   },
   {
     platform: 'TikTok',
     url: 'https://tiktok.com/@',
-    icon: 'TT'
+    icon: 'TT',
+    iconPath: tiktokSvg
   },
-  // Add more as needed, e.g.:
-  // {
-  //   platform: 'LinkedIn',
-  //   url: 'https://linkedin.com/company/wardentechnology',
-  //   icon: 'LI'
-  // },
+  {
+    platform: 'LinkedIn',
+    url: 'https://linkedin.com/company/wardentechnology',
+    icon: 'LI',
+    iconPath: linkedinSvg
+  },
   // {
   //   platform: 'YouTube',
   //   url: 'https://youtube.com/@wardentechnology',
@@ -55,9 +66,10 @@ const socialLinks = [
 <style module>
 .social-links {
   display: flex;
-  gap: 1.25rem;          /* space between icons */
+  gap: 1.75rem;          /* space between icons */
   justify-content: center;
   flex-wrap: wrap;
+  padding: 2px;
 }
 
 .social-icon {
@@ -73,6 +85,7 @@ const socialLinks = [
   font-weight: bold;
   text-decoration: none;
   transition: all 0.2s ease;
+  padding: 2px;
 }
 
 .social-icon:hover,
@@ -86,4 +99,9 @@ const socialLinks = [
 .social-icon:active {
   transform: translateY(0);
 }
+
+.social-icon[href*="facebook.com"]:hover   { background-color: #1877f2; color: white; }
+.social-icon[href*="instagram.com"]:hover { background: linear-gradient(45deg, #f56040, #c13584, #833ab4, #5851db); color: white; }
+.social-icon[href*="x.com"]:hover         { background-color: #000000; color: white; }
+.social-icon[href*="tiktok.com"]:hover    { background-color: #000000; color: white; }
 </style>
