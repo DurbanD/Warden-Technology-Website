@@ -41,10 +41,9 @@
         </button>
       </form>
 
-      <p class="hours-note">
-        Business hours: Mon–Fri 8 AM–5 PM EST  
-        Urgent issues: Call anytime — higher-tier members get off-hours response.
-      </p>
+      <p class="hours-note">Business hours: {{$config.hoursOfOperation.weekStart}}–{{$config.hoursOfOperation.weekEnd}} {{$config.hoursOfOperation.dayStart}}–{{$config.hoursOfOperation.dayEnd}} {{$config.hoursOfOperation.timeZone}}</p>
+      <p class="hours-note">Urgent issues: Call anytime — higher-tier members get off-hours response.</p>
+      <p class="hours-note">We typically respond within 1 business day. For urgent matters, please call {{ $config.phoneNumberFormatted }}</p>
     </div>
   </section>
 </template>
@@ -199,7 +198,7 @@ input, textarea {
 }
 
 .hours-note {
-  margin-top: 2rem;
+  margin-top: 0.25rem;
   color: #666;
   font-size: 1rem;
 }

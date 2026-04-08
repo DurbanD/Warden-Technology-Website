@@ -16,7 +16,7 @@ export const config = {
     },
     hoursOfOperation: {
         weekStart: "Monday",
-        weedEnd: "Friday",
+        weekEnd: "Friday",
         dayStart: "8AM",
         dayEnd: "5PM",
         timeZone: "EST"
