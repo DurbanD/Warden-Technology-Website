@@ -1,11 +1,28 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     // For now, just one route since it's single-page
-    { path: '/', component: () => HomeView },
+    { path: '/',
+      name: 'Home',
+      component: () => import('@/views/HomeView.vue') 
+    },
+    {
+      path: '/sla',
+      name: 'Sla',
+      component: import('@/views/SlaPage.vue'),           // The dedicated SLA page
+    },
+    {
+      path: '/terms',
+      name: 'Terms',
+      component: () => import('@/views/TermsPage.vue')
+    },
+    {
+      path: '/privacy',
+      name: 'Privacy',
+      component: () => import('@/views/PrivacyPage.vue')
+    }
   ],
   scrollBehavior(to, from, savedPosition) {
     if (to.hash) {

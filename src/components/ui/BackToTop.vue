@@ -15,7 +15,7 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 
 const showButton = ref(false)
-const scrollThreshold = 100  // pixels scrolled before showing button
+const scrollThreshold = 30  // pixels scrolled before showing button
 
 const handleScroll = () => {
   showButton.value = window.scrollY > scrollThreshold
@@ -40,7 +40,6 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
-@import '../../assets/base.css';
 
 .back-to-top-floating {
   position: fixed;
@@ -53,7 +52,7 @@ onUnmounted(() => {
   background-color: var(--blue-font-1);        /* blue-600 – your brand color */
   color: white;
   font-size: 1.5rem;
-  border: none;
+  border: 1px solid black;
   cursor: pointer;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   opacity: 0.9;
@@ -74,7 +73,7 @@ onUnmounted(() => {
 }
 
 /* Optional: hide on very small screens if desired */
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
   .back-to-top-floating {
     width: 44px;
     height: 44px;
@@ -82,5 +81,5 @@ onUnmounted(() => {
     bottom: 20px;
     right: 20px;
   }
-}
+} */
 </style>

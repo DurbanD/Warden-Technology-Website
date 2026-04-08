@@ -1,26 +1,37 @@
 <script setup>
-import ComingSoon from '../components/ComingSoon.vue'
+import HeroSection from '../components/Sections/HeroSection.vue';
+import WhySection from '../components/Sections/WhySection.vue';
+import ServicesSection from '../components/Sections/ServicesSection.vue';
+import PricingSection from '../components/Sections/PricingSection.vue';
+import FAQSection from '../components/Sections/FAQSection.vue';
+import ContactSection from '../components/Sections/ContactSection.vue';
 </script>
 
 <template>
-  <ComingSoon />
+  <div class="page-wrapper"> 
+    
+    <main class="main-content">
+      <HeroSection />
+      <WhySection />
+      <ServicesSection />
+      <PricingSection />
+      <FAQSection />
+      <ContactSection />
+    </main>
+    
+  </div>
 </template>
 
 <style scoped>
-h1 {
-  font-weight: 500;
-  font-size: 2rem;
-  position: relative;
-  /* top: -10px; */
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-h3 {
-  font-size: 1.2rem;
+.main-content {
+  flex: 1;
+  width: 100%;
+  /* padding-top: calc(var(--header-height) + var(--header-gap)); */
 }
-
-.greetings h1,
-.greetings h3 {
-  text-align: center;
-}
-
 </style>

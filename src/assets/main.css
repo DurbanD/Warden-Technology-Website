@@ -1,10 +1,12 @@
 @import './base.css';
 
 #app {
+  width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1.25rem;
   font-weight: normal;
+  /* border:3px solid green; */
 }
 
 a,
@@ -21,6 +23,89 @@ a,
   color: var(--blue-font-1);
   transition: 0.4s;
   padding: 3px;
+}
+
+/* Thin black outline around text */
+.outline-text-black {
+  text-shadow: 
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
+}
+
+/* Optional: slightly thicker outline */
+.outline-text-black.thicker {
+  text-shadow: 
+    -2px -2px 0 #000,
+     2px -2px 0 #000,
+    -2px  2px 0 #000,
+     2px  2px 0 #000;
+}
+
+/* Optional: add a soft glow/drop shadow on top of the outline */
+.outline-text-black.glow {
+  text-shadow: 
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000,
+     0    0   6px rgba(0,0,0,0.7);  /* soft outer glow */
+}
+
+/* Thin white outline around text */
+.outline-text-white {
+  text-shadow: 
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
+}
+
+/* Optional: slightly thicker outline */
+.outline-text-white.thicker {
+  text-shadow: 
+    -2px -2px 0 #000,
+     2px -2px 0 #000,
+    -2px  2px 0 #000,
+     2px  2px 0 #000;
+}
+
+/* Optional: add a soft glow/drop shadow on top of the outline */
+.outline-text-white.glow {
+  text-shadow: 
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000,
+     0    0   6px rgba(0,0,0,0.7);  /* soft outer glow */
+}
+
+.soft-outline {
+  text-shadow: 
+    0   0   4px rgba(0,0,0,0.0),   /* soft outer glow */
+    -1px -1px 0 rgba(0,0,0,0.4),
+    1px -1px 0 rgba(0,0,0,0.4),
+    -1px  1px 0 rgba(0,0,0,0.4),
+    1px  1px 0 rgba(0,0,0,0.4);
+}
+.soft-outline.glow {
+  text-shadow: 
+    0   0   4px rgba(0,0,0,0.5),   /* soft outer glow */
+    -1px -1px 0 rgba(0,0,0,0.4),
+    1px -1px 0 rgba(0,0,0,0.4),
+    -1px  1px 0 rgba(0,0,0,0.4),
+    1px  1px 0 rgba(0,0,0,0.4);
+}
+
+.very-soft-outline-glow {
+  color: white;
+  text-shadow: 
+    0 0 6px rgba(0,0,0,0.5),       /* main soft glow */
+    -0.8px -0.8px 0 rgba(0,0,0,0.3),
+     0.8px -0.8px 0 rgba(0,0,0,0.3),
+    -0.8px  0.8px 0 rgba(0,0,0,0.3),
+     0.8px  0.8px 0 rgba(0,0,0,0.3);
 }
 
 @media (hover: hover) {

@@ -8,13 +8,13 @@
         <div class="ft-contact-wrapper">
             <div class="ft-contact">
                 <div class="ft-phoneContact">
-                    <a href='tel:'>Call Us: </a>
-                    <span class='ft-contact-text'> {{contactNumber}}</span>
+                    <a :href="`tel:${$config.phoneNumber}`">Call Us: </a>
+                    <span class='ft-contact-text'> {{$config.phoneNumberFormatted}}</span>
                 </div>
                 <span class="separator"> | </span>
                 <div class="ft-emailContact">
                     <a href="mailto:support@wardentechnology.com">Email: </a>
-                    <span class='ft-contact-text'> {{contactEmail}}</span>
+                    <span class='ft-contact-text'> {{$config.email}}</span>
                 </div>
                 <span class="separator"> | </span>
                 <SocialLinks />
@@ -22,12 +22,17 @@
             <!-- <SocialLinks /> -->
         </div>
         <!-- Left: Copyright -->
-            <div class="copyright">
-                <span>© {{ currentYear }} Warden Technology. All rights reserved.</span>
-                <!-- <span class="separator"> | </span> -->
-                <span>Orlando, Florida</span>
-            </div>
-        </div>
+          <div class="copyright">
+              <span>© {{ currentYear }} Warden Technology. All rights reserved.</span>
+              <!-- <span class="separator"> | </span> -->
+              <span>Orlando, Florida</span>
+          </div>
+          <div class="legal">
+            <span><router-link to="/terms" id="footer-tos">Terms of Service</router-link></span>
+            <span><router-link to="/sla" id="footer-sla">Service Level Agreement</router-link></span>
+            <span><router-link to="/privacy" id="footer-privacy">Privacy Policy</router-link></span>
+          </div>
+      </div>
     </div>
   </footer>
 </template>
@@ -46,14 +51,14 @@ const currentYear = computed(() => new Date().getFullYear())
 
 <style scoped>
 .footer {
-  background-color: #f8f9fad2; /* light gray background */
+  background-color: var(--white-soft); /* light gray background */
   border-top: 1px solid #e9ecef;
   padding: 1rem 0;
   margin: 4rem 0 0 0; /* space from last section */
   font-size: 0.95rem;
   color: #6c757d; /* muted gray text */
   border-radius: 10px;
-  width: 90vw;
+  width: 100%;
 }
 
 .container {
@@ -103,7 +108,7 @@ const currentYear = computed(() => new Date().getFullYear())
   }
 } */
 
-.copyright {
+.copyright, .legal {
     text-align: center;
     width: 100%;
     display: flex;

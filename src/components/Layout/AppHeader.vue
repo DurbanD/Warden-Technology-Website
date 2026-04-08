@@ -2,18 +2,18 @@
   <header class="header">
     <div class="container">
       <!-- Logo / Home link -->
-      <router-link to="#hero" class="logo">
+      <router-link to="/" class="logo">
         <img alt="logo" class="logo" src="@/assets/WT Logo Black.svg" width="35" height="35" />
       </router-link>
 
       <!-- Desktop Navigation -->
       <nav class="nav-desktop">
-        <router-link to="#why" class="nav-link">Why WardenTech</router-link>
-        <router-link to="#what" class="nav-link">Services</router-link>
-        <router-link to="#how" class="nav-link">How It Works</router-link>
-        <router-link to="#pricing" class="nav-link">Pricing</router-link>
-        <router-link to="#faq" class="nav-link">FAQ</router-link>
-        <router-link to="#contact" class="nav-link">Contact</router-link>
+        <router-link to="/#hero" class="nav-link">Home</router-link>
+        <router-link to="/#why" class="nav-link">Why WardenTech</router-link>
+        <router-link to="/#services" class="nav-link">Services</router-link>
+        <router-link to="/#pricing" class="nav-link">Pricing</router-link>
+        <router-link to="/#faq" class="nav-link">FAQ</router-link>
+        <router-link to="/#contact" class="nav-link">Contact</router-link>
       </nav>
 
       <!-- Mobile Hamburger Button -->
@@ -31,9 +31,8 @@
       <nav v-if="isOpen" class="nav-mobile">
         <div class="mobile-links">
           <router-link to="#hero" class="mobile-link" @click="isOpen = false">Home</router-link>
-          <router-link to="#why" class="mobile-link" @click="isOpen = false">Why Us</router-link>
-          <router-link to="#what" class="mobile-link" @click="isOpen = false">Services</router-link>
-          <router-link to="#how" class="mobile-link" @click="isOpen = false">How It Works</router-link>
+          <router-link to="#why" class="mobile-link" @click="isOpen = false">Why WardenTech</router-link>
+          <router-link to="#services" class="mobile-link" @click="isOpen = false">Services</router-link>
           <router-link to="#pricing" class="mobile-link" @click="isOpen = false">Pricing</router-link>
           <router-link to="#faq" class="mobile-link" @click="isOpen = false">FAQ</router-link>
           <router-link to="#contact" class="mobile-link" @click="isOpen = false">Contact</router-link>
@@ -56,19 +55,23 @@ const isOpen = ref(false)
   left: 0;
   right: 0;
   z-index: 50;
-  background-color: rgba(240,240,245,0.95);
+  background-color: var(--white-soft);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
+  height: var(--header-height);
+  border-bottom: 2px solid black;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  height: 100%;
   padding: 0.5rem 1.5rem;
   display: flex;
   align-items: center;
   align-content: center;
   justify-content: space-between;
+  /* border: 3px solid pink; */
 }
 
 .logo {
@@ -94,7 +97,11 @@ const isOpen = ref(false)
   .nav-desktop {
     display: flex;
     align-items: center;
+    justify-content: center;
+    align-items: center;
     gap: 2rem;
+    /* border: 3px solid blue; */
+    height: 100%;
   }
 }
 
@@ -104,6 +111,14 @@ const isOpen = ref(false)
   text-decoration: none;
   transition: color 0.2s ease;
   padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  height: 100%;
+  /* border: 3px solid green; */
 }
 
 .nav-link:hover {

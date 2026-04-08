@@ -27,31 +27,31 @@ const iconHeight = '20'
 const socialLinks = [
   {
     platform: 'Facebook',
-    url: 'https://facebook.com/', // ← replace with real URL
+    url: 'https://www.facebook.com/profile.php?id=61572075384001', // ← replace with real URL
     icon: 'FB',
     iconPath: facebookSvg
   },
   {
     platform: 'Instagram',
-    url: 'https://instagram.com/',
+    url: 'https://www.instagram.com/warden.technology/',
     icon: 'IG',
     iconPath: instagramSvg
   },
   {
     platform: 'X', // formerly Twitter
-    url: 'https://x.com/', // or your business handle
+    url: 'https://x.com/WardenTechFL', // or your business handle
     icon: 'X',
     iconPath: xSvg
   },
-  {
-    platform: 'TikTok',
-    url: 'https://tiktok.com/@',
-    icon: 'TT',
-    iconPath: tiktokSvg
-  },
+  // {
+  //   platform: 'TikTok',
+  //   url: 'https://tiktok.com/@',
+  //   icon: 'TT',
+  //   iconPath: tiktokSvg
+  // },
   {
     platform: 'LinkedIn',
-    url: 'https://linkedin.com/company/wardentechnology',
+    url: 'https://linkedin.com/company/warden-technology',
     icon: 'LI',
     iconPath: linkedinSvg
   },
