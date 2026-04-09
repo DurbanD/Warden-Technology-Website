@@ -110,6 +110,9 @@
 
 <script setup>
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
 
 // Form state
 const form = ref({
@@ -138,7 +141,10 @@ const handleSubmit = async () => {
       body: new URLSearchParams(formData).toString()
     })
 
-    alert('✅ Message sent successfully! We\'ll get back to you soon.')
+    setTimeout(() => {
+      router.push('/contact-success')
+    }, 1500)
+    // alert('✅ Message sent successfully! We\'ll get back to you soon.')
     
     // Reset form
     form.value = { name: '', email: '', phone: '', message: '' }
