@@ -115,7 +115,8 @@ import { ref } from 'vue'
 // Form state
 const form = ref({
   name: '',
-  contact: '',
+  email: '',
+  phone: '',
   message: ''
 })
 
