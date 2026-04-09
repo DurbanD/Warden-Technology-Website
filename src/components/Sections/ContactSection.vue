@@ -20,7 +20,7 @@
       </div>
 
       <!-- Simple Form -->
-      <form @submit.prevent="submitForm" class="contact-form" name="contact" netlify>
+      <!-- <form @submit.prevent="submitForm" class="contact-form" name="contact" netlify>
         <div class="form-group">
           <label for="name">Name</label>
           <input type="text" name="name" id="name" v-model="form.name" required placeholder="Your name" />
@@ -34,6 +34,67 @@
         <div class="form-group">
           <label for="message">How can we help?</label>
           <textarea id="message" name="message" v-model="form.message" required rows="5" placeholder="Describe your issue or what you're looking for..."></textarea>
+        </div>
+
+        <button type="submit" class="submit-button" :disabled="submitting">
+          {{ submitting ? 'Sending...' : 'Send Message' }}
+        </button>
+      </form> -->
+      <!-- Netlify Form -->
+      <form 
+        name="contact" 
+        method="POST" 
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        @submit.prevent="handleSubmit"
+        class="contact-form"
+        netlify
+      >
+        <!-- Hidden Netlify fields -->
+        <input type="hidden" name="form-name" value="contact" />
+        <input type="text" name="bot-field" style="display: none;" />
+
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input 
+            type="text" 
+            id="name" 
+            v-model="form.name" 
+            required 
+            placeholder="Your name"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input 
+            type="email" 
+            id="email" 
+            v-model="form.email" 
+            required 
+            placeholder="your@email.com"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone (optional)</label>
+          <input 
+            type="tel" 
+            id="phone" 
+            v-model="form.phone" 
+            placeholder="(407) XXX-XXXX"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="message">How can we help?</label>
+          <textarea 
+            id="message" 
+            v-model="form.message" 
+            rows="6" 
+            required 
+            placeholder="Describe your issue or what you're looking for..."
+          ></textarea>
         </div>
 
         <button type="submit" class="submit-button" :disabled="submitting">
@@ -60,7 +121,7 @@ const form = ref({
 
 const submitting = ref(false)
 
-const submitForm = async () => {
+const handleSubmit = async () => {
   submitting.value = true
 
   try {
@@ -77,14 +138,44 @@ const submitForm = async () => {
       body: new URLSearchParams(formData).toString()
     })
 
-    alert('Message sent successfully! We\'ll get back to you soon.')
+    alert('✅ Message sent successfully! We\'ll get back to you soon.')
+    
+    // Reset form
     form.value = { name: '', email: '', phone: '', message: '' }
+
   } catch (error) {
-    alert('There was an error sending your message. Please try calling us directly.')
+    console.error(error)
+    alert('❌ There was an error sending your message. Please try calling us directly.')
   } finally {
     submitting.value = false
   }
 }
+
+// const submitForm = async () => {
+//   submitting.value = true
+
+//   try {
+//     const formData = new FormData()
+//     formData.append('form-name', 'contact')
+//     formData.append('name', form.value.name)
+//     formData.append('email', form.value.email)
+//     formData.append('phone', form.value.phone)
+//     formData.append('message', form.value.message)
+
+//     await fetch('/', {
+//       method: 'POST',
+//       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+//       body: new URLSearchParams(formData).toString()
+//     })
+
+//     alert('Message sent successfully! We\'ll get back to you soon.')
+//     form.value = { name: '', email: '', phone: '', message: '' }
+//   } catch (error) {
+//     alert('There was an error sending your message. Please try calling us directly.')
+//   } finally {
+//     submitting.value = false
+//   }
+// }
 </script>
 
 <style scoped>
