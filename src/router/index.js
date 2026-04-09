@@ -11,7 +11,7 @@ const router = createRouter({
     {
       path: '/sla',
       name: 'Sla',
-      component: import('@/views/SlaPage.vue'),           // The dedicated SLA page
+      component: () => import('@/views/SlaPage.vue'),           // The dedicated SLA page
     },
     {
       path: '/terms',
