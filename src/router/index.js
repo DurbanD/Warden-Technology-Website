@@ -22,6 +22,11 @@ const router = createRouter({
       path: '/privacy',
       name: 'Privacy',
       component: () => import('@/views/PrivacyPage.vue')
+    },
+    {
+      path: '/contact-success',
+      name: 'ContactSuccess',
+      component: () => import('@/views/ContactSuccess.vue')
     }
   ],
   scrollBehavior(to, from, savedPosition) {
