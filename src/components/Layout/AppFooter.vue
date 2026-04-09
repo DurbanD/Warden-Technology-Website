@@ -25,7 +25,7 @@
           <div class="copyright">
               <span>© {{ currentYear }} Warden Technology. All rights reserved.</span>
               <!-- <span class="separator"> | </span> -->
-              <span>Orlando, Florida</span>
+              <span>Tavares, Florida</span>
           </div>
           <div class="legal">
             <span><router-link to="/terms" id="footer-tos">Terms of Service</router-link></span>
