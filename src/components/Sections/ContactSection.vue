@@ -48,7 +48,6 @@
         data-netlify-honeypot="bot-field"
         @submit.prevent="handleSubmit"
         class="contact-form"
-        netlify
       >
         <!-- Hidden Netlify fields -->
         <input type="hidden" name="form-name" value="contact" />
