@@ -81,7 +81,7 @@
             type="tel" 
             id="phone" 
             v-model="form.phone" 
-            placeholder="(407) XXX-XXXX"
+            placeholder="(555) 555-5555"
           />
         </div>
 
@@ -144,7 +144,6 @@ const handleSubmit = async () => {
     setTimeout(() => {
       router.push('/contact-success')
     }, 1500)
-    // alert('✅ Message sent successfully! We\'ll get back to you soon.')
     
     // Reset form
     form.value = { name: '', email: '', phone: '', message: '' }
@@ -157,31 +156,6 @@ const handleSubmit = async () => {
   }
 }
 
-// const submitForm = async () => {
-//   submitting.value = true
-
-//   try {
-//     const formData = new FormData()
-//     formData.append('form-name', 'contact')
-//     formData.append('name', form.value.name)
-//     formData.append('email', form.value.email)
-//     formData.append('phone', form.value.phone)
-//     formData.append('message', form.value.message)
-
-//     await fetch('/', {
-//       method: 'POST',
-//       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-//       body: new URLSearchParams(formData).toString()
-//     })
-
-//     alert('Message sent successfully! We\'ll get back to you soon.')
-//     form.value = { name: '', email: '', phone: '', message: '' }
-//   } catch (error) {
-//     alert('There was an error sending your message. Please try calling us directly.')
-//   } finally {
-//     submitting.value = false
-//   }
-// }
 </script>
 
 <style scoped>
