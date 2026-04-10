@@ -29,7 +29,7 @@ const faqItems = [
   },
   {
     question: "What happens if I only need help once?",
-    answer: "That's fine — book a visit through Vigil. You'll pay the trip fee + hourly rate (with 30% off your first visit). If you like how it goes, Shield or higher can save you money next time."
+    answer: "That's fine — book a visit through Vigil. You'll pay the trip fee + hourly rate (with 20% off your first visit). If you like how it goes, Shield or higher can save you money next time."
   },
   {
     question: "How fast can you respond?",
@@ -37,7 +37,7 @@ const faqItems = [
   },
   {
     question: "Do you offer remote support?",
-    answer: "Yes — Shield includes remote support at $29/hr, Citadel has free remote during business hours, and Fortress includes 24/7 free remote support."
+    answer: "Yes — Shield & Citadel has free remote during business hours, and Fortress includes 24/7 free remote support."
   },
   {
     question: "What areas do you serve?",

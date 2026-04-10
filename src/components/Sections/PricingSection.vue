@@ -4,7 +4,7 @@
     <div class="container">
       <h2 class="section-title">Choose Your Protection Level</h2>
       <p class="section-subtitle">
-        From watchful observation to unbreakable fortress — all paid plans include first 2 hours free and escalating discounts on trips & hourly rates.
+        From watchful observation to unbreakable fortress — all paid plans include escalating discounts on trips & hourly rates.
       </p>
 
       <!-- View Toggle -->
