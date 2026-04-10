@@ -7,7 +7,6 @@
             class="hero-bg-image"
             />
         <div class="hero-overlay"></div>
-    <!-- <div class="hero-bg"></div> or <img> if not using CSS bg -->
 
         <div class="hero-content">
             <img
@@ -65,21 +64,19 @@ const scrollTo = (id) => {
 </script>
 
 <style scoped>
-
 .hero {
   position: relative;
   height: auto;
-  /* min-height: 60vh; */
   display: flex;
-  flex-flow: column;
-  align-items: center; 
-  justify-content: space-between;
+  align-items: center;         /* Centers content vertically */
+  justify-content: center;
   text-align: center;
-  color: white;                    /* Base text color for the whole section */
+  color: white;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.88);
   border-radius: var(--section-border-radius);
   margin-bottom: var(--section-gap);
+  padding: var(--section-padding);
+  padding-bottom: 0.5rem;
 }
 
 .hero::before {
@@ -113,15 +110,13 @@ const scrollTo = (id) => {
 }
 
 .hero-content {
-  max-width: 900px;
-  padding: 1.75rem;
+  position: relative;
   z-index: 1;
+  max-width: 900px;
+  padding: 2rem 1.5rem;
   display: flex;
-  flex-flow: column;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  /* border: 5px solid pink; */
-  height: 100%;
 }
 
 .brand-name {
@@ -188,33 +183,26 @@ const scrollTo = (id) => {
     align-items: center;
     align-content: center;
     width: 100%;
+    margin-top: 0.2rem;
+    margin-bottom: 0;
 }
 
 .location-headline {
     font-size: 1.1rem;
     opacity: 0.9;
-  /* border: 3px solid pink; */
     width: 100%;
+    margin-bottom: 0.6rem;
 }
 
 .location-badges {
   display: flex;
   flex-wrap: wrap;
-  /* align-content: space-between; */
-  /* align-items: stretch;
-  align-content: space-between;
-  justify-content: space-between; */
   gap: 1.5rem;
   justify-content: space-between;
   font-size: 1.1rem;
   opacity: 0.9;
-  /* border: 3px solid pink; */
   width: 100%;
 }
-
-/* .hero-trust-badge {
-    border: 3px solid green;
-} */
 
 .brand-name,
 .headline,
@@ -230,23 +218,42 @@ const scrollTo = (id) => {
     0 0 8px rgba(0,0,0,0.6);   /* Soft outer glow for extra pop */
 }
 
-/* .subheadline,
-.trust-badges span {
-  text-shadow: 
-    -1.5px -1.5px 0 #000,
-    1.5px -1.5px 0 #000,
-    -1.5px 1.5px 0 #000,
-    1.5px 1.5px 0 #000,
-    0 0 6px rgba(0,0,0,0.5);
-} */
+.location-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: space-evenly;
+}
 
 @media (max-width: 768px) {
   .hero {
-    height: 80vh;
     min-height: 500px;
   }
-  .brand-name { font-size: 3.2rem; }
-  .headline { font-size: 2rem; }
-  .subheadline { font-size: 1.2rem; }
+  .brand-name { 
+    font-size: 3.2rem; 
+    margin-bottom: 0.8rem;
+  }
+  .headline { 
+    font-size: 1.7rem; 
+    margin-bottom: 0.8rem;
+  }
+  .cta-group {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.75rem;
+  }  
+  .subheadline {
+    font-size: 1.15rem;
+    margin-bottom: 1.5rem;
+  }
+  .location-badges {
+    gap: 0.6rem;
+  }
+  .location-badge {
+    font-size: 1rem;
+    padding: 0 0.5rem;
+  }
 }
+
 </style>
