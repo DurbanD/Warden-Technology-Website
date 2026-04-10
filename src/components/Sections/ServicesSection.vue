@@ -95,8 +95,8 @@
         <button class="secondary-button" @click="scrollTo('#pricing')">
           Explore Membership Plans
         </button>
-        <router-link to="#service-areas">See all the areas we serve →</router-link>
       </div>
+      <router-link class="service-area-link" to="#service-areas">See all the areas we serve →</router-link>
     </div>
   </section>
 </template>
@@ -147,6 +147,11 @@ const scrollTo = (id) => {
   box-shadow: 0 4px 15px rgba(0,0,0,0.06);
   transition: transform 0.2s, box-shadow 0.2s;
   border: 1px solid var(--card-border-dark-soft);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: space-evenly;
 }
 
 .service-card:hover {
@@ -184,11 +189,12 @@ const scrollTo = (id) => {
 }
 
 .cta-bottom {
-  margin-top: 4rem;
+  margin-top: 3rem;
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
   justify-content: center;
+  margin-bottom: 1rem;
 }
 
 .cta-button, .secondary-button {
@@ -220,6 +226,7 @@ const scrollTo = (id) => {
   background: rgba(37, 99, 235, 0.1);
   transform: scale(1.05);
 }
+
 
 @media (max-width: 968px) {
   .section-title { font-size: 2.2rem; }
