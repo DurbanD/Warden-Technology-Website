@@ -76,7 +76,7 @@ const scrollTo = (id) => {
   color: white;                    /* Base text color for the whole section */
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.88);
-  border-radius: 5px;
+  border-radius: var(--section-border-radius);
   margin-bottom: var(--section-gap);
 }
 

@@ -55,7 +55,7 @@ const scrollTo = (id) => {
     text-align: center;
     margin-bottom: var(--section-gap);
     border: 1px solid var(--white-soft);
-    border-radius: 5px;
+    border-radius: var(--section-border-radius);
 }
 
 .container {

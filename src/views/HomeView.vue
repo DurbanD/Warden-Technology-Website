@@ -5,6 +5,7 @@ import ServicesSection from '../components/Sections/ServicesSection.vue';
 import PricingSection from '../components/Sections/PricingSection.vue';
 import FAQSection from '../components/Sections/FAQSection.vue';
 import ContactSection from '../components/Sections/ContactSection.vue';
+import ServiceAreas from '../components/Sections/ServiceAreas.vue';
 </script>
 
 <template>
@@ -14,6 +15,7 @@ import ContactSection from '../components/Sections/ContactSection.vue';
       <HeroSection />
       <WhySection />
       <ServicesSection />
+      <ServiceAreas />
       <PricingSection />
       <FAQSection />
       <ContactSection />

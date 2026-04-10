@@ -189,7 +189,7 @@ const handleSubmit = async () => {
   padding: var(--section-padding);
   background: var(--gray-light, #f8f9fa);
   text-align: center;
-  border-radius: 5px;
+  border-radius: var(--section-border-radius);
 }
 
 .container {

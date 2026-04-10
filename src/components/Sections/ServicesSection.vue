@@ -95,6 +95,7 @@
         <button class="secondary-button" @click="scrollTo('#pricing')">
           Explore Membership Plans
         </button>
+        <router-link to="#service-areas">See all the areas we serve →</router-link>
       </div>
     </div>
   </section>
@@ -112,6 +113,7 @@ const scrollTo = (id) => {
   background: white;
   text-align: center;
   margin-bottom: var(--section-gap);
+  border-radius: var(--section-border-radius);
 }
 
 .container {

@@ -59,7 +59,7 @@ const faqItems = [
   padding: var(--section-padding);
   background: white;
   text-align: center;
-  border-radius: 5px;
+  border-radius: var(--section-border-radius);
   margin-bottom: var(--section-gap);
 }
 

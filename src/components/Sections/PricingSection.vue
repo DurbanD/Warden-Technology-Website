@@ -92,6 +92,7 @@ onUnmounted(() => {
   background: var(--gray-light, #f8f9fa);
   text-align: center;
   margin-bottom: var(--section-gap);
+  border-radius: var(--section-border-radius);
 }
 
 .container {
