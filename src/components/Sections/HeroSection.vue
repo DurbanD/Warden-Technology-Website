@@ -45,9 +45,11 @@
                 <div class="location-badges">
                     <span class="location-badge">Leesburg</span>
                     <span class="location-badge">Tavares</span>
+                    <span class="location-badge">Eustis</span>
                     <span class="location-badge">The Villages</span>
                     <span class="location-badge">Apopka</span>
                     <span class="location-badge">Clermont</span>
+                    <span class="location-badge">Groveland</span>
                 </div>
             </div>
         </div>
