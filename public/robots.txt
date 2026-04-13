@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Optional: Tell crawlers where your sitemap is
+Sitemap: https://wardentechnology.com/sitemap.xml
