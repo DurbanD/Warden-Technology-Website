@@ -91,12 +91,14 @@
                 <td class="feature-label">Getting Started</td>
                 <td class="no"><router-link to="#contact" class="contact-link">Contact Us</router-link></td>
                 <td class="yes">
-                    <a v-if="planType === 'home'" href="https://buy.stripe.com/aFafZjeAg4YN3Oz1A6dEs01" class="subscribe-link">Subscribe</a>
-                    <router-link v-if="planType === 'business'" to="#contact" class="contact-link">Contact Us</router-link>
+                  <router-link to="#contact" class="contact-link">Contact Us</router-link>
+                    <!-- <a v-if="planType === 'home'" href="https://buy.stripe.com/aFafZjeAg4YN3Oz1A6dEs01" class="subscribe-link">Subscribe</a> -->
+                    <!-- <router-link v-if="planType === 'business'" to="#contact" class="contact-link">Contact Us</router-link> -->
                 </td>
                 <td class="yes">
-                    <a v-if="planType === 'home'" href="https://buy.stripe.com/00w3cx3VC2QF84P5QmdEs00" class="subscribe-link">Subscribe</a>
-                    <router-link v-if="planType === 'business'" to="#contact" class="contact-link">Contact Us</router-link>
+                  <router-link to="#contact" class="contact-link">Contact Us</router-link>
+                    <!-- <a v-if="planType === 'home'" href="https://buy.stripe.com/00w3cx3VC2QF84P5QmdEs00" class="subscribe-link">Subscribe</a> -->
+                    <!-- <router-link v-if="planType === 'business'" to="#contact" class="contact-link">Contact Us</router-link> -->
                 </td>
                 <td class="yes">
                     <router-link to="#contact" class="contact-link">Contact Us</router-link>

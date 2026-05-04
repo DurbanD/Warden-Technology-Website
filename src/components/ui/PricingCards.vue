@@ -15,7 +15,7 @@
           <div class="price">{{ shieldHomePrice }}</div>
         </div>
         <ShieldFeatures />
-        <button class="cta-button"><a href="https://buy.stripe.com/aFafZjeAg4YN3Oz1A6dEs01" class="soft-outline">Subscribe</a></button>
+        <button class="cta-button"><a href="/#contact" class="soft-outline">Contact Us</a></button>
       </div>
 
       <div class="pricing-card popular">
@@ -25,7 +25,7 @@
           <div class="price">{{ citadelHomePrice }}</div>
         </div>
         <CitadelFeatures />
-        <button class="cta-button"><a href="https://buy.stripe.com/00w3cx3VC2QF84P5QmdEs00" class="soft-outline">Subscribe</a></button>
+        <button class="cta-button"><a href="/#contact" class="soft-outline">Contact Us</a></button>
       </div>
 
       <div class="pricing-card">
